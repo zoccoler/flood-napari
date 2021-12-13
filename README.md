@@ -27,7 +27,11 @@ https://napari.org/docs/plugins/index.html
 
 ## Installation
 
-You can install `flood-napari` via [pip]:
+First install napari with:
+
+    pip install napari[all]
+
+Then, you can install `flood-napari` via [pip]:
 
     pip install flood-napari
 
