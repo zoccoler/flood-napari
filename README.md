@@ -11,6 +11,8 @@ A simple plugin to flood 8-bit 2D images by means of a big blue label.
 
 Essentially, it creates a label by manual thresholding the image. Useful visual feedback to probe background heterogeneities.
 
+![](https://github.com/zoccoler/flood-napari/raw/main/images/flood_napari_demo.gif)
+
 Each of the 3 modules was implemented differently (check this [blog post](https://biapol.github.io/blog/marcelo_zoccoler/entry_user_interf3/) for more information about each implementation), but the result is similar.
 
 ----------------------------------
