@@ -9,7 +9,7 @@
 
 A simple plugin to flood 8-bit 2D images by means of a big blue label.
 
-Essentially, it creates a label by manual thresholding the image. May be useful to probe background heterogeneities.
+Essentially, it creates a label by manual thresholding the image. Useful visual feedback to probe background heterogeneities.
 
 Each of the 3 modules was implemented differently (check this [blog post](https://biapol.github.io/blog/marcelo_zoccoler/entry_user_interf3/) for more information about each implementation), but the result is similar.
 
