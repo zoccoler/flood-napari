@@ -18,9 +18,10 @@ from magicgui import magic_factory
 Plugin1
 '''
 # This imports UI file generated from Designer
-from .flood_tool import Ui_MainWindow
 from PyQt5.QtWidgets import QMainWindow
 from napari.layers import Image
+from qtpy import uic
+from pathlib import Path
 
 
 def flood1(image, delta):
@@ -51,13 +52,14 @@ class ComboBox_with_click_event(QComboBox):
 
 
 # Define the main window class
-class Qt_Designer_flood(QMainWindow,  Ui_MainWindow):
+class Qt_Designer_flood(QMainWindow):
     """Main window class."""
 
     def __init__(self, napari_viewer):  # include napari_viewer as argument
         super().__init__()
         self.viewer = napari_viewer
-        self.setupUi(self)                     # Initialize GUI
+        self.UI_FILE = str(Path(__file__).parent / "flood_tool.ui")  # path to .ui file
+        uic.loadUi(self.UI_FILE, self)           # load QtDesigner .ui file
         # Replaces default combobox by combobox with click event
         self.gridLayout.removeWidget(self.comboBox)
         self.comboBox.close()
@@ -145,7 +147,8 @@ from napari.types import ImageData, LabelsData
                level={'label': 'Water Level:',
                       'widget_type': 'Slider',
                       'min': 0,
-                      'max': 255})
+                      'max': 255,
+                      'enabled': False})
 def magic_factory_flood(image: ImageData, delta: int = 0,
                         level: int = 0) -> LabelsData:
     """
