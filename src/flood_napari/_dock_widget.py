@@ -52,7 +52,7 @@ class ComboBox_with_click_event(QComboBox):
 
 
 # Define the main window class
-class Qt_Designer_flood(QMainWindow):
+class QtDesignerFlood(QMainWindow):
     """Main window class."""
 
     def __init__(self, napari_viewer):  # include napari_viewer as argument
@@ -192,7 +192,7 @@ def flood3(image: ImageData, delta: int = 0, level: int = 0) -> LayerDataTuple:
             {'name': 'flood result', 'metadata': {'new_level': new_level}}))
 
 
-class FunctionGui_flood(FunctionGui):
+class FunctionGuiFlood(FunctionGui):
     """Sub-class from FunctionGui."""
 
     def __init__(self):
@@ -226,4 +226,4 @@ class FunctionGui_flood(FunctionGui):
 @napari_hook_implementation
 def napari_experimental_provide_dock_widget():
     # you can return either a single widget, or a sequence of widgets
-    return [Qt_Designer_flood, magic_factory_flood, FunctionGui_flood]
+    return [QtDesignerFlood, magic_factory_flood, FunctionGuiFlood]
