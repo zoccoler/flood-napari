@@ -18,7 +18,7 @@ from magicgui import magic_factory
 Plugin1
 '''
 # This imports UI file generated from Designer
-from PyQt5.QtWidgets import QMainWindow
+from qtpy.QtWidgets import QMainWindow
 from napari.layers import Image
 from qtpy import uic
 from pathlib import Path
