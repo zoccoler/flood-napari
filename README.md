@@ -7,7 +7,11 @@
 [![codecov](https://codecov.io/gh/zoccoler/flood-napari/branch/main/graph/badge.svg)](https://codecov.io/gh/zoccoler/flood-napari)
 [![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/flood-napari)](https://napari-hub.org/plugins/flood-napari)
 
+### This project is discontinued. You can still install and use it, but it is no longer maintained nor supported.
+
 A simple plugin to flood 8-bit 2D images by means of a big blue label.
+
+
 
 Essentially, it creates a label by manual thresholding the image. It can be used as a visual feedback to probe background heterogeneities.
 
